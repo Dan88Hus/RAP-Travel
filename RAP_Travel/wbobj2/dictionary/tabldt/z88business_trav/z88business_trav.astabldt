@@ -1,0 +1,24 @@
+@EndUserText.label : 'Z88BUSINESS_TRAVEL_DB'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table z88business_trav {
+
+  key client            : abap.clnt not null;
+  key travel_uuid       : sysuuid_x16 not null;
+  title                 : z88travel_title;
+  description           : z88travel_desc;
+  traveler_name         : z88travel_name;
+  departure_date        : abap.dats;
+  departure_place       : z88travel_place;
+  destination           : z88travel_place;
+  return_date           : abap.dats;
+  status                : z88travel_status;
+  local_created_by      : abp_creation_user;
+  local_created_at      : abp_creation_tstmpl;
+  local_last_changed_by : abp_locinst_lastchange_user;
+  local_last_changed_at : abp_locinst_lastchange_tstmpl;
+  last_changed_at       : abp_lastchange_tstmpl;
+
+}
