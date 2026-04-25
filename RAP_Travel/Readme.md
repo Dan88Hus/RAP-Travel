@@ -37,4 +37,11 @@ flowchart BT
 | **ZTRAVEL_STATUS** | CHAR | 1 | Workflow status (O: Open, A: Accepted, R: Rejected) |
 
 -------------------
-
+Data Element |  Domain | Label (Short) | Label (Medium) | Label (Long) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Z88TRAVEL_ID** | Z88TRAVEL_ID | Travel ID | Travel ID | Travel Number |
+| **Z88TRAVEL_TITLE** | Z88TRAVEL_TITLE | Title | Travel Title | Travel Title |
+| **Z88TRAVEL_DESC** | Z88TRAVEL_DESC | Description | Description | Travel Description |
+| **Z88TRAVEL_NAME** | Z88TRAVEL_NAME | Traveler | Traveler Name | Traveler Name |
+| **Z88TRAVEL_PLACE** | Z88TRAVEL_PLACE | Place | Place | Departure Place |
+| **Z88TRAVEL_STATUS** | Z88TRAVEL_STATUS | Status | Status | Travel Status |
