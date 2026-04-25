@@ -46,7 +46,7 @@ Data Element |  Domain | Label (Short) | Label (Medium) | Label (Long) |
 | **Z88TRAVEL_PLACE** | Z88TRAVEL_PLACE | Place | Place | Departure Place |
 | **Z88TRAVEL_STATUS** | Z88TRAVEL_STATUS | Status | Status | Travel Status |
 -------------
-## 3. Administrative Fields (Administrative Data)
+##### Administrative Fields (Administrative Data)
 
 The following technical fields are required for the RAP framework to handle logging and concurrency control (ETags):
 
