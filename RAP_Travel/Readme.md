@@ -45,3 +45,15 @@ Data Element |  Domain | Label (Short) | Label (Medium) | Label (Long) |
 | **Z88TRAVEL_NAME** | Z88TRAVEL_NAME | Traveler | Traveler Name | Traveler Name |
 | **Z88TRAVEL_PLACE** | Z88TRAVEL_PLACE | Place | Place | Departure Place |
 | **Z88TRAVEL_STATUS** | Z88TRAVEL_STATUS | Status | Status | Travel Status |
+-------------
+## 3. Administrative Fields (Administrative Data)
+
+The following technical fields are required for the RAP framework to handle logging and concurrency control (ETags):
+
+| Field Name | Data Element | Purpose |
+| :--- | :--- | :--- |
+| **local_created_by** | abp_creation_user | User who created the record |
+| **local_created_at** | abp_creation_tstmpl | Creation timestamp |
+| **local_last_changed_by** | abp_locinst_lastchange_user | Last user to modify (Local) |
+| **local_last_changed_at** | abp_locinst_lastchange_tstmpl | Last change timestamp (Local Instance) |
+| **last_changed_at** | abp_lastchange_tstmpl | Global ETag for concurrency check |
