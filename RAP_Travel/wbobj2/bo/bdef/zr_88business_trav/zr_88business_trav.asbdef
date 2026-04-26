@@ -1,0 +1,53 @@
+managed implementation in class ZBP_R_88BUSINESS_TRAV unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_88BUSINESS_TRAV alias Travel
+persistent table Z88BUSINESS_TRAV
+extensible
+draft table Z88BSNESS_TRAV_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   TravelUUID,
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   TravelUUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for Z88BUSINESS_TRAV corresponding extensible
+  {
+    TravelUUID = TRAVEL_UUID;
+    Title = TITLE;
+    Description = DESCRIPTION;
+    TravelerName = TRAVELER_NAME;
+    DepartureDate = DEPARTURE_DATE;
+    DeparturePlace = DEPARTURE_PLACE;
+    Destination = DESTINATION;
+    ReturnDate = RETURN_DATE;
+    Status = STATUS;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}

@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_88BUSINESS_TRAV'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_88BUSINESS_TRAV'
+  }
+}
+define service ZUI_ZZ_88BUSINESS_TRAV_O4 provider contracts odata_v4_ui {
+  expose ZC_88BUSINESS_TRAV as Travel;
+}

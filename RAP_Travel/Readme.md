@@ -57,3 +57,18 @@ The following technical fields are required for the RAP framework to handle logg
 | **local_last_changed_by** | abp_locinst_lastchange_user | Last user to modify (Local) |
 | **local_last_changed_at** | abp_locinst_lastchange_tstmpl | Last change timestamp (Local Instance) |
 | **last_changed_at** | abp_lastchange_tstmpl | Global ETag for concurrency check |
+----
+| # | Object Type | Name |
+| :--- | :--- | :--- |
+| 1 | **Database Table** | `Z88BUSINESS_TRAV` |
+| 2 | **Draft Table** | `Z88BSNESS_TRAV_D` |
+| 3 | **Root CDS View** | `ZR_88BUSINESS_TRAV` |
+| 4 | **Projection CDS View** | `ZC_88BUSINESS_TRAV` |
+| 5 | **Behavior Definition (Root)** | `ZR_88BUSINESS_TRAV` |
+| 6 | **Behavior Definition (Projection)** | `ZC_88BUSINESS_TRAV` |
+| 7 | **Behavior Implementation (Root)** | `ZBP_R_88BUSINESS_TRAV` |
+| 8 | **Behavior Implementation (Projection)** | `ZBP_C_88BUSINESS_TRAV` |
+| 9 | **Service Definition** | `ZUI_88BUSINESS_TRAV_O4` |
+| 10 | **Service Binding** | `ZUI_88BUSINESS_TRAV_O4` |
+
+---

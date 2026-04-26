@@ -1,0 +1,25 @@
+@EndUserText.label : 'Draft Database Table for Z88BSNESS_TRAV_D'
+@AbapCatalog.enhancement.category : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table z88bsness_trav_d {
+
+  key mandt          : mandt not null;
+  key traveluuid     : sysuuid_x16 not null;
+  title              : z88travel_title;
+  description        : z88travel_desc;
+  travelername       : z88travel_name;
+  departuredate      : abap.dats;
+  departureplace     : z88travel_place;
+  destination        : z88travel_place;
+  returndate         : abap.dats;
+  status             : z88travel_status;
+  localcreatedby     : abp_creation_user;
+  localcreatedat     : abp_creation_tstmpl;
+  locallastchangedby : abp_locinst_lastchange_user;
+  locallastchangedat : abp_locinst_lastchange_tstmpl;
+  lastchangedat      : abp_lastchange_tstmpl;
+  "%admin"           : include sych_bdl_draft_admin_inc;
+
+}
